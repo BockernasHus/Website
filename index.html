@@ -12,51 +12,10 @@ Mail: web@danielforsberg.se
   <link rel="shortcut icon" href="favicon.ico" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCURRLKE4udT9kv4TNy0x2LgcrUKuCr0iQ&libraries=places"></script>
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-          <script>
-		var request = {
-		  placeId: 'ChIJRxayyiAJW0YRz_fBKKCA6Yo',
-		  fields: ['name', 'opening_hours']
-		};
-
-		service = new google.maps.places.PlacesService(map);
-		service.getDetails(request, callback);
-
-		function callback(place, status) {
-		  if (status == google.maps.places.PlacesServiceStatus.OK) {
-		    createMarker(place);
-		  }
-		}
-		//var url = "https://bhus.azurewebsites.net/api/openinghours?code=6HWQfahX8nfpYm3f7WVq3POeaBnF7goc4TdJY7ILqZaAT6ugUMwJew==";
-            var url = "https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJRxayyiAJW0YRz_fBKKCA6Yo&language=sv&key=AIzaSyCURRLKE4udT9kv4TNy0x2LgcrUKuCr0iQ";
-            $.getJSON(url, function (data) {
-                var monday = data.result.opening_hours.weekday_text[0].split(" ");
-                var tuesday = data.result.opening_hours.weekday_text[1].split(" ");
-                var wednesday = data.result.opening_hours.weekday_text[2].split(" ");
-                var thursday = data.result.opening_hours.weekday_text[3].split(" ");
-                var friday = data.result.opening_hours.weekday_text[4].split(" ");
-                var saturday = data.result.opening_hours.weekday_text[5].split(" ");
-                var sunday = data.result.opening_hours.weekday_text[6].split(" ");
-                document.getElementById("monday").innerHTML = monday[1];
-                document.getElementById("tuesday").innerHTML = tuesday[1];
-                document.getElementById("wednesday").innerHTML = wednesday[1];
-                document.getElementById("thursday").innerHTML = thursday[1];
-                document.getElementById("friday").innerHTML = friday[1];
-                document.getElementById("saturday").innerHTML = saturday[1];
-                document.getElementById("sunday").innerHTML = sunday[1];
-                console.log(monday[1]);
-                console.log(tuesday[1]);
-                console.log(wednesday[1]);
-                console.log(thursday[1]);
-                console.log(friday[1]);
-                console.log(saturday[1]);
-                console.log(sunday[1]);
-
-            });
-            </script>
   <script>
     (function (i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
@@ -225,7 +184,47 @@ Mail: web@danielforsberg.se
                     </tr>
 
           </table> -->
+<script>
+		var request = {
+		  placeId: 'ChIJRxayyiAJW0YRz_fBKKCA6Yo',
+		  fields: ['name', 'opening_hours']
+		};
 
+		service = new google.maps.places.PlacesService(map);
+		service.getDetails(request, callback);
+
+		function callback(place, status) {
+		  if (status == google.maps.places.PlacesServiceStatus.OK) {
+		    createMarker(place);
+		  }
+		}
+		//var url = "https://bhus.azurewebsites.net/api/openinghours?code=6HWQfahX8nfpYm3f7WVq3POeaBnF7goc4TdJY7ILqZaAT6ugUMwJew==";
+            var url = "https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJRxayyiAJW0YRz_fBKKCA6Yo&language=sv&key=AIzaSyCURRLKE4udT9kv4TNy0x2LgcrUKuCr0iQ";
+            $.getJSON(url, function (data) {
+                var monday = data.result.opening_hours.weekday_text[0].split(" ");
+                var tuesday = data.result.opening_hours.weekday_text[1].split(" ");
+                var wednesday = data.result.opening_hours.weekday_text[2].split(" ");
+                var thursday = data.result.opening_hours.weekday_text[3].split(" ");
+                var friday = data.result.opening_hours.weekday_text[4].split(" ");
+                var saturday = data.result.opening_hours.weekday_text[5].split(" ");
+                var sunday = data.result.opening_hours.weekday_text[6].split(" ");
+                document.getElementById("monday").innerHTML = monday[1];
+                document.getElementById("tuesday").innerHTML = tuesday[1];
+                document.getElementById("wednesday").innerHTML = wednesday[1];
+                document.getElementById("thursday").innerHTML = thursday[1];
+                document.getElementById("friday").innerHTML = friday[1];
+                document.getElementById("saturday").innerHTML = saturday[1];
+                document.getElementById("sunday").innerHTML = sunday[1];
+                console.log(monday[1]);
+                console.log(tuesday[1]);
+                console.log(wednesday[1]);
+                console.log(thursday[1]);
+                console.log(friday[1]);
+                console.log(saturday[1]);
+                console.log(sunday[1]);
+
+            });
+            </script>
         </div>
         <div class="col-sm-8 text-left">
           <br>
