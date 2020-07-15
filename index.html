@@ -200,7 +200,8 @@ Mail: web@danielforsberg.se
 		    createMarker(place);	
 		  }	
 		}
-            var url = "https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJRxayyiAJW0YRz_fBKKCA6Yo&language=sv&key=AIzaSyCURRLKE4udT9kv4TNy0x2LgcrUKuCr0iQ";
+            //var url = "https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJRxayyiAJW0YRz_fBKKCA6Yo&language=sv&key=AIzaSyCURRLKE4udT9kv4TNy0x2LgcrUKuCr0iQ";
+	    var url = "https://drive.google.com/file/d/1uN0XrKc-fFYfkfitIg2JXxsApceGlEs-/view?usp=sharing";
             $.getJSON(url, function (data) {
                 var monday = data.result.opening_hours.weekday_text[0].split(" ");
                 var tuesday = data.result.opening_hours.weekday_text[1].split(" ");
