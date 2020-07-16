@@ -114,7 +114,8 @@ Mail: web@danielforsberg.se
 
     <div class="container text-center">
       <div class="row content">
-        <div id="openhours" class="col-sm-3 sidenav table-responsive">
+	      <div id="openhours" class="col-sm-3 sidenav table-responsive"></div>
+        <div class="col-sm-3 sidenav table-responsive">
           <h3>Öppettider:</h3>
           <table class="table2">
             <tr>
@@ -197,7 +198,21 @@ Mail: web@danielforsberg.se
 
 		function callback(place, status) {	
 		  if (status == google.maps.places.PlacesServiceStatus.OK) {	
-		    console.log(place);	
+		    console.log(place);
+		    var monday = place.opening_hours.weekday_text[0].split(" ");
+                    var tuesday = place.opening_hours.weekday_text[1].split(" ");
+                    var wednesday = place.opening_hours.weekday_text[2].split(" ");
+                    var thursday = place.opening_hours.weekday_text[3].split(" ");
+                    var friday = place.opening_hours.weekday_text[4].split(" ");
+                    var saturday = place.opening_hours.weekday_text[5].split(" ");
+                    var sunday = place.opening_hours.weekday_text[6].split(" ");
+                    document.getElementById("monday").innerHTML = monday[1];
+                    document.getElementById("tuesday").innerHTML = tuesday[1];
+                    document.getElementById("wednesday").innerHTML = wednesday[1];
+                    document.getElementById("thursday").innerHTML = thursday[1];
+                    document.getElementById("friday").innerHTML = friday[1];
+                    document.getElementById("saturday").innerHTML = saturday[1];
+                    document.getElementById("sunday").innerHTML = sunday[1];
 		  }	
 		}	    
             </script>
