@@ -185,37 +185,6 @@ Mail: web@danielforsberg.se
                     </tr>
 
           </table> -->
-<script>
-		var map;
-		var service;
-		var request = {	
-		  placeId: 'ChIJRxayyiAJW0YRz_fBKKCA6Yo',
-		  fields: ['name', 'opening_hours']
-		};	
-
-		service = new google.maps.places.PlacesService(openhours);	
-		service.getDetails(request, callback);	
-
-		function callback(place, status) {	
-		  if (status == google.maps.places.PlacesServiceStatus.OK) {	
-		    console.log(place);
-		    var monday = place.opening_hours.weekday_text[0].split(" ");
-                    var tuesday = place.opening_hours.weekday_text[1].split(" ");
-                    var wednesday = place.opening_hours.weekday_text[2].split(" ");
-                    var thursday = place.opening_hours.weekday_text[3].split(" ");
-                    var friday = place.opening_hours.weekday_text[4].split(" ");
-                    var saturday = place.opening_hours.weekday_text[5].split(" ");
-                    var sunday = place.opening_hours.weekday_text[6].split(" ");
-                    document.getElementById("monday").innerHTML = monday[1];
-                    document.getElementById("tuesday").innerHTML = tuesday[1];
-                    document.getElementById("wednesday").innerHTML = wednesday[1];
-                    document.getElementById("thursday").innerHTML = thursday[1];
-                    document.getElementById("friday").innerHTML = friday[1];
-                    document.getElementById("saturday").innerHTML = saturday[1];
-                    document.getElementById("sunday").innerHTML = sunday[1];
-		  }	
-		}	    
-            </script>
         </div>
         <div class="col-sm-8 text-left">
           <br>
@@ -301,7 +270,37 @@ Mail: web@danielforsberg.se
           </br>
 
 	<div id="openhours" class="col-sm-3 sidenav table-responsive"></div>
+<script>
+		var map;
+		var service;
+		var request = {	
+		  placeId: 'ChIJRxayyiAJW0YRz_fBKKCA6Yo',
+		  fields: ['name', 'opening_hours']
+		};	
 
+		service = new google.maps.places.PlacesService(openhours);	
+		service.getDetails(request, callback);	
+
+		function callback(place, status) {	
+		  if (status == google.maps.places.PlacesServiceStatus.OK) {	
+		    console.log(place);
+		    var monday = place.opening_hours.weekday_text[0].split(" ");
+                    var tuesday = place.opening_hours.weekday_text[1].split(" ");
+                    var wednesday = place.opening_hours.weekday_text[2].split(" ");
+                    var thursday = place.opening_hours.weekday_text[3].split(" ");
+                    var friday = place.opening_hours.weekday_text[4].split(" ");
+                    var saturday = place.opening_hours.weekday_text[5].split(" ");
+                    var sunday = place.opening_hours.weekday_text[6].split(" ");
+                    document.getElementById("monday").innerHTML = monday[1];
+                    document.getElementById("tuesday").innerHTML = tuesday[1];
+                    document.getElementById("wednesday").innerHTML = wednesday[1];
+                    document.getElementById("thursday").innerHTML = thursday[1];
+                    document.getElementById("friday").innerHTML = friday[1];
+                    document.getElementById("saturday").innerHTML = saturday[1];
+                    document.getElementById("sunday").innerHTML = sunday[1];
+		  }	
+		}	    
+            </script>
         </div>
       </div>
       <div class="push"></div>
