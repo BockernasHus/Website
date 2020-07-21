@@ -283,7 +283,6 @@ Mail: web@danielforsberg.se
 
 		function callback(place, status) {	
 		  if (status == google.maps.places.PlacesServiceStatus.OK) {	
-		    console.log(place);
 		    var monday = place.opening_hours.weekday_text[0].split(" ");
                     var tuesday = place.opening_hours.weekday_text[1].split(" ");
                     var wednesday = place.opening_hours.weekday_text[2].split(" ");
