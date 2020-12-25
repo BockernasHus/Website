@@ -14,14 +14,15 @@ Mail: web@danielforsberg.se
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCURRLKE4udT9kv4TNy0x2LgcrUKuCr0iQ&libraries=places&language=sv"></script>
+  <script type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCURRLKE4udT9kv4TNy0x2LgcrUKuCr0iQ&libraries=places&language=sv"></script>
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
   <script>
     (function (i, s, o, g, r, a, m) {
-    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-      (i[r].q = i[r].q || []).push(arguments)
-    }, i[r].l = 1 * new Date(); a = s.createElement(o),
-      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
     })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
     ga('create', 'UA-71802847-1', 'auto');
@@ -114,7 +115,7 @@ Mail: web@danielforsberg.se
 
     <div class="container text-center">
       <div class="row content">
-	      
+
         <div class="col-sm-3 sidenav table-responsive">
           <h3>Öppettider:</h3>
           <table class="table2">
@@ -147,9 +148,9 @@ Mail: web@danielforsberg.se
               <td id="sunday">11:00-14;00</td>
             </tr>
           </table>
-         <!--<h4>Påsktider:</h4>
+          <h4>Julöppet:</h4>
           <table class="table2">
-             <tr>
+            <!--<tr>
               <td>Långfredag:</td>
               <td>Stängt</td>
             </tr>
@@ -166,25 +167,32 @@ Mail: web@danielforsberg.se
               <td>Stängt</td>
             </tr>
           </table>-->
+            <tr>
+              <td>25/12:</td>
+              <td>Stängt</td>
+            </tr>
+            <tr>
+              <td>26/12:</td>
+              <td>Stängt</td>
+            </tr>
+            <tr>
+              <td>27/12:</td>
+              <td>Stängt</td>
+            </tr>
+            <tr>
+              <td>31/12:</td>
+              <td>Stängt</td>
+            </tr>
+            <tr>
+              <td>1/1 2021:</td>
+              <td>Stängt</td>
+            </tr>
+            <tr>
+              <td>3/1 2021:</td>
+              <td>Stängt</td>
+            </tr>
 
-             <!--<tr>
-                       <td>Juldagen:</td>
-                        <td>Stängt</td>
-                    </tr>
-                    <tr>
-                        <td>Annandag jul:</td>
-                        <td>11:00-15:00</td>
-	  	    </tr> 
-                    <tr>
-                        <td>Nyårsafton:</td>
-                        <td>Stängt</td>
-                    </tr>
-                    <tr>
-                        <td>Nyårsdagen:</td>
-                        <td>Stängt</td>
-                    </tr>
-
-          </table> -->
+          </table>
         </div>
         <div class="col-sm-8 text-left">
           <br>
@@ -212,37 +220,37 @@ Mail: web@danielforsberg.se
           </br>
           </br>
 
-	<div id="openhours" class="col-sm-3 sidenav table-responsive"></div>
-<script>
-		var map;
-		var service;
-		var request = {	
-		  placeId: 'ChIJRxayyiAJW0YRz_fBKKCA6Yo',
-		  fields: ['name', 'opening_hours']
-		};	
+          <div id="openhours" class="col-sm-3 sidenav table-responsive"></div>
+          <script>
+            var map;
+            var service;
+            var request = {
+              placeId: 'ChIJRxayyiAJW0YRz_fBKKCA6Yo',
+              fields: ['name', 'opening_hours']
+            };
 
-		service = new google.maps.places.PlacesService(openhours);	
-		service.getDetails(request, callback);	
+            service = new google.maps.places.PlacesService(openhours);
+            service.getDetails(request, callback);
 
-		function callback(place, status) {	
-		  if (status == google.maps.places.PlacesServiceStatus.OK) {	
-		    var monday = place.opening_hours.weekday_text[0].split(" ");
-                    var tuesday = place.opening_hours.weekday_text[1].split(" ");
-                    var wednesday = place.opening_hours.weekday_text[2].split(" ");
-                    var thursday = place.opening_hours.weekday_text[3].split(" ");
-                    var friday = place.opening_hours.weekday_text[4].split(" ");
-                    var saturday = place.opening_hours.weekday_text[5].split(" ");
-                    var sunday = place.opening_hours.weekday_text[6].split(" ");
-                    document.getElementById("monday").innerHTML = monday[1];
-                    document.getElementById("tuesday").innerHTML = tuesday[1];
-                    document.getElementById("wednesday").innerHTML = wednesday[1];
-                    document.getElementById("thursday").innerHTML = thursday[1];
-                    document.getElementById("friday").innerHTML = friday[1];
-                    document.getElementById("saturday").innerHTML = saturday[1];
-                    document.getElementById("sunday").innerHTML = sunday[1];
-		  }	
-		}	    
-            </script>
+            function callback(place, status) {
+              if (status == google.maps.places.PlacesServiceStatus.OK) {
+                var monday = place.opening_hours.weekday_text[0].split(" ");
+                var tuesday = place.opening_hours.weekday_text[1].split(" ");
+                var wednesday = place.opening_hours.weekday_text[2].split(" ");
+                var thursday = place.opening_hours.weekday_text[3].split(" ");
+                var friday = place.opening_hours.weekday_text[4].split(" ");
+                var saturday = place.opening_hours.weekday_text[5].split(" ");
+                var sunday = place.opening_hours.weekday_text[6].split(" ");
+                document.getElementById("monday").innerHTML = monday[1];
+                document.getElementById("tuesday").innerHTML = tuesday[1];
+                document.getElementById("wednesday").innerHTML = wednesday[1];
+                document.getElementById("thursday").innerHTML = thursday[1];
+                document.getElementById("friday").innerHTML = friday[1];
+                document.getElementById("saturday").innerHTML = saturday[1];
+                document.getElementById("sunday").innerHTML = sunday[1];
+              }
+            }	    
+          </script>
         </div>
       </div>
       <div class="push"></div>
