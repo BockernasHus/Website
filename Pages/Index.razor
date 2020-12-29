@@ -1,0 +1,151 @@
+@page "/"
+
+<div class="container text-center">
+  <div class="row content">
+
+    <div class="col-sm-3 sidenav table-responsive">
+      <h3>Öppettider:</h3>
+      <h5 id="open">
+        <h5 id="green" style="color:green"></h5>
+      </h5>
+      <h5 id="open">
+        <h5 id="red" style="color:red"></h5>
+      </h5>
+      <table class="table2">
+        <tr>
+          <td>Måndag:</td>
+          <td id="monday">11:00-15:00</td>
+        </tr>
+        <tr>
+          <td>Tisdag:</td>
+          <td id="tuesday">11:00-18:00</td>
+        </tr>
+        <tr>
+          <td>Onsdag:</td>
+          <td id="wednesday">11:00-15:00</td>
+        </tr>
+        <tr>
+          <td>Torsdag:</td>
+          <td id="thursday">11:00-18:00</td>
+        </tr>
+        <tr>
+          <td>Fredag:</td>
+          <td id="friday">11:00-15:00</td>
+        </tr>
+        <tr>
+          <td>Lördag:</td>
+          <td id="saturday">11:00-14:00</td>
+        </tr>
+        <tr>
+          <td>Söndag:</td>
+          <td id="sunday">11:00-14;00</td>
+        </tr>
+      </table>
+      <h4>Julöppet:</h4>
+      <table class="table2">
+        <!--<tr>
+              <td>Långfredag:</td>
+              <td>Stängt</td>
+            </tr>
+            <tr>
+              <td>Påskafton:</td>
+              <td>Stängt</td>
+            </tr>
+	    <tr>
+              <td>Påskdagen:</td>
+              <td>Stängt</td>
+            </tr>
+	    <tr>
+              <td>Annandag påsk:</td>
+              <td>Stängt</td>
+            </tr>
+          </table>-->
+        <tr>
+          <td>25/12:</td>
+          <td>Stängt</td>
+        </tr>
+        <tr>
+          <td>26/12:</td>
+          <td>Stängt</td>
+        </tr>
+        <tr>
+          <td>27/12:</td>
+          <td>Stängt</td>
+        </tr>
+        <tr>
+          <td>31/12:</td>
+          <td>Stängt</td>
+        </tr>
+        <tr>
+          <td>1/1 2021:</td>
+          <td>Stängt</td>
+        </tr>
+        <tr>
+          <td>3/1 2021:</td>
+          <td>Stängt</td>
+        </tr>
+
+      </table>
+    </div>
+    <div class="col-sm-8 text-left">
+      <h1>Välkommen till Böckernas Hus</h1>
+      <p class="ingress">Man säger att man kan likna ett antikvariat vid ett samhällets minne. I ett samhälles
+        "minne", den samlade kunskapsbanken, ska "allt", eller i varje fall det mesta helst gå att finna. På
+        antikvariatets hyllor söker man den mycket gamla boken, men också den med bara några år på nacken.</p>
+      <figure>
+        <img class="img-responsive" src="images/huset.jpg" alt="Böckernas Hus utifrån" title="Böckernas Hus">
+        <figcaption>Böckernas Hus</figcaption>
+      </figure>
+      <p>Antikvariatet Böckernas Hus ligger centralt i Tidan, ca 23 kilometer utanför Skövde. Det är en stor lokal
+        på 400 kvadratmeter med tillhörande parkering.</p>
+      <p>Här kan du finna allsköns böcker om i stort sett vad som helst, vi har ca 60 000 st böcker i butiken, det
+        finns även kartor, kalendrar, tidningar och mycket mer. Förutom att sälja, köper vi även in böcker så tveka
+        inte att höra av dig om du har lite böcker du behöver bli av med. Vår kontaktinformation hittar du under <a
+          class="lankar" href="kontakt.html" title="Kontaktsidan">Kontakt & Köpvillkor</a>.</p>
+      <br>
+      <br>
+      <br>
+      <br>
+
+      <div id="openhours" class="col-sm-3 sidenav table-responsive"></div>
+      @* <script>
+        var map;
+        var service;
+        var request = {
+        placeId: 'ChIJRxayyiAJW0YRz_fBKKCA6Yo',
+        fields: ['name', 'opening_hours']
+        };
+
+        service = new google.maps.places.PlacesService(openhours);
+        service.getDetails(request, callback);
+
+        function callback(place, status) {
+        if (status == google.maps.places.PlacesServiceStatus.OK) {
+        var monday = place.opening_hours.weekday_text[0].split(" ");
+        var tuesday = place.opening_hours.weekday_text[1].split(" ");
+        var wednesday = place.opening_hours.weekday_text[2].split(" ");
+        var thursday = place.opening_hours.weekday_text[3].split(" ");
+        var friday = place.opening_hours.weekday_text[4].split(" ");
+        var saturday = place.opening_hours.weekday_text[5].split(" ");
+        var sunday = place.opening_hours.weekday_text[6].split(" ");
+        document.getElementById("monday").innerHTML = monday[1];
+        document.getElementById("tuesday").innerHTML = tuesday[1];
+        document.getElementById("wednesday").innerHTML = wednesday[1];
+        document.getElementById("thursday").innerHTML = thursday[1];
+        document.getElementById("friday").innerHTML = friday[1];
+        document.getElementById("saturday").innerHTML = saturday[1];
+        document.getElementById("sunday").innerHTML = sunday[1];
+        document.getElementById("open").innerHTML = "Just nu: "
+        if (place.opening_hours.open_now == true) {
+        document.getElementById("green").innerHTML = "Öppet"
+        }
+        else {
+        document.getElementById("red").innerHTML = "Stängt"
+        }
+        }
+        }
+        </script> *@
+    </div>
+  </div>
+  <div class="push"></div>
+</div>

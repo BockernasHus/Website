@@ -1,0 +1,47 @@
+@page "/kontakt"
+@inject IJSRuntime JSRuntime
+
+<div class="container text-center">
+  <div class="row content">
+    <div class="col-sm-10 text-left">
+      <h1>Kontakt</h1>
+
+      <div id="map-outer" class="col-md-12">
+        <div id="address" class="col-md-4">
+          <h3>Vart ni hittar oss</h3>
+          <address>
+            <strong>Böckernas Hus</strong><br>
+            Slingvägen 1<br>
+            52143<br>
+            Tidan<br>
+            Sverige<br>
+            <abbr>Tel:</abbr> 0500-470052 <br>
+          </address>
+          <a class="lankar" href="https://www.facebook.com/bockernashus" title="Böckernas Hus på Facebook"
+            target="_blank">Vår Facebook-sida</a><br />
+
+
+        </div>
+        <!-- Old Google Maps -->
+        <!-- <div id="map-container" class="col-md-8"></div> -->
+        <iframe
+          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCgLvE6fuh6Acm8Z3FCijq94jXUYvNzuJA&q=Bockernas+Hus"
+          width="400" height="300" frameborder="0" style="border:0"></iframe>
+        <!-- New Google Maps -->
+        <div id="map"></div>
+      </div><!-- /map-outer -->
+    </div>
+  </div>
+
+</div>
+<div class="push"></div>
+
+@code{
+  protected override async Task OnAfterRenderAsync(bool firstRender)
+  {
+    if (firstRender)
+    {
+      await JSRuntime.InvokeVoidAsync("initMap", null);
+    }
+  }
+}
