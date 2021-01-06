@@ -1,10 +1,16 @@
-﻿using System;
-namespace BockernasHus.Models.Entities
+﻿namespace BockernasHus.Models.Entities
 {
-    public class Authors
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+
+    public class Author
     {
-        public Authors()
-        {
-        }
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }
+
+        public string FirstName { get; set; }
+
+        public string LastName { get; set; }
     }
 }

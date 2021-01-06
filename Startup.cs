@@ -9,6 +9,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using BockernasHus.Data;
+using BockernasHus.Repository;
+using Microsoft.EntityFrameworkCore;
+using Repository;
 
 namespace BockernasHus
 {
@@ -28,6 +31,9 @@ namespace BockernasHus
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
+            services.AddDbContext<BockernasHusDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("BockernasHusDatabase")));
+            services.AddScoped<IBockernasHusRepository, BockernasHusRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
