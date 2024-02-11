@@ -6,40 +6,52 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
+
 <url>
-  <loc>http://bockernashus.se/</loc>
-  <lastmod>2015-12-31T14:06:24+00:00</lastmod>
+  <loc>https://bockernashus.se/</loc>
+  <lastmod>2024-02-11T18:27:25+00:00</lastmod>
+  <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://bockernashus.se/omforetaget.html</loc>
-  <lastmod>2015-12-31T16:42:58+00:00</lastmod>
+  <loc>https://bockernashus.se/omforetaget</loc>
+  <lastmod>2024-02-11T18:27:25+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://bockernashus.se/interior.html</loc>
-  <lastmod>2015-12-31T14:05:49+00:00</lastmod>
+  <loc>https://bockernashus.se/interior</loc>
+  <lastmod>2024-02-11T18:27:25+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://bockernashus.se/bokborsen.html</loc>
-  <lastmod>2015-12-31T16:42:05+00:00</lastmod>
+  <loc>https://bockernashus.se/bokborsen</loc>
+  <lastmod>2024-02-11T18:27:25+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://bockernashus.se/lankar.html</loc>
-  <lastmod>2015-12-31T14:01:58+00:00</lastmod>
+  <loc>https://bockernashus.se/lankar</loc>
+  <lastmod>2024-02-11T18:27:25+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://bockernashus.se/kontakt.html</loc>
-  <lastmod>2015-12-31T14:04:45+00:00</lastmod>
+  <loc>https://bockernashus.se/kontakt</loc>
+  <lastmod>2024-02-11T18:27:25+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://bockernashus.se/index.html</loc>
-  <lastmod>2015-12-31T14:06:24+00:00</lastmod>
+  <loc>https://bockernashus.se/inkopskategorier</loc>
+  <lastmod>2024-02-11T18:27:25+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://bockernashus.se/images/interior3_big.html</loc>
-  <lastmod>2015-12-30T21:41:33+00:00</lastmod>
+  <loc>https://bockernashus.se/images/interior3_big</loc>
+  <lastmod>2024-02-11T18:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://bockernashus.se/images/interior2_big.html</loc>
-  <lastmod>2015-12-30T21:41:32+00:00</lastmod>
+  <loc>https://bockernashus.se/images/interior2_big</loc>
+  <lastmod>2024-02-11T18:27:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
+
+
 </urlset>
