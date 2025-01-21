@@ -4,4 +4,4 @@
 # Block all robots
 Sitemap: https://bockernashus.se/sitemap.xml
 User-agent: *
-Disallow: 
+
