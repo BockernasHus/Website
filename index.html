@@ -120,12 +120,7 @@ Mail: web@danielforsberg.se
 
         <div class="col-sm-3 sidenav table-responsive">
           <h3>Öppettider:</h3>
-          <h5 id="open">
-            <h5 id="green" style="color:green"></h5>
-          </h5>
-          <h5 id="open">
-            <h5 id="red" style="color:red"></h5>
-          </h5>
+          <h5 id="open">Just nu: <span id="status"></span></h5>
           <table class="table2">
             <tr>
               <td>Måndag:</td>
@@ -236,7 +231,7 @@ Mail: web@danielforsberg.se
               fields: ['name', 'opening_hours']
             };
 
-            service = new google.maps.places.PlacesService(openhours);
+            service = new google.maps.places.PlacesService(document.getElementById('openhours'));
             service.getDetails(request, callback);
 
             function callback(place, status) {
@@ -255,12 +250,13 @@ Mail: web@danielforsberg.se
                 document.getElementById("friday").innerHTML = friday[1];
                 document.getElementById("saturday").innerHTML = saturday[1];
                 document.getElementById("sunday").innerHTML = sunday[1];
-                document.getElementById("open").innerHTML = "Just nu: "
-                if (place.opening_hours.open_now == true) {
-                  document.getElementById("green").innerHTML = "Öppet"
-                }
-                else {
-                  document.getElementById("red").innerHTML = "Stängt"
+                var statusEl = document.getElementById("status");
+                if (place.opening_hours.open_now === true) {
+                  statusEl.textContent = "Öppet";
+                  statusEl.style.color = "green";
+                } else {
+                  statusEl.textContent = "Stängt";
+                  statusEl.style.color = "red";
                 }
               }
             }	    
